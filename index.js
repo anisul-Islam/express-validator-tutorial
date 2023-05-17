@@ -1,6 +1,6 @@
-const express = require("express");
-const { body, validationResult } = require("express-validator");
-const userRoutes = require("./routes/user");
+const express = require('express');
+
+const userRoutes = require('./routes/user');
 
 const app = express();
 
@@ -12,8 +12,8 @@ app.listen(port, () => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/api", userRoutes);
+app.use('/api', userRoutes);
 
-app.get("/test", (req, res) => {
-  res.send("testing the server");
+app.get('/test', (req, res) => {
+  res.send('testing the server');
 });
